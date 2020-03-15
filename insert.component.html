@@ -1,0 +1,33 @@
+
+    <h2>Employee insertion</h2>
+    <table>
+      <tr>
+        <td>User Id</td>
+        <td><input #empId onfocus="this.value=''" required></td>
+      </tr>
+      <tr>
+          <td>FirstName</td>
+          <td><input #ename onfocus="this.value=''" required></td>
+      </tr>
+
+      <tr>
+        <td>Email</td>
+        <td><input #email onfocus="this.value=''" required></td>
+    </tr>
+      
+    <tr>
+          <td>Phone</td>
+          <td><input #phone onfocus="this.value=''" required></td>
+      </tr>
+    
+ </table>
+      
+      
+        
+  
+  
+    <br>
+    <button (click)="add(empId.value,ename.value,email.value,phone.value);">
+        Create
+    </button>
+

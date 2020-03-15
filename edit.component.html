@@ -1,0 +1,72 @@
+<p>edit works!</p>
+<div class="card">
+    <div class="card-body">
+      <form [formGroup]="angForm" novalidate>
+        <div class="form-group">
+          <label class="col-md-4">empId</label>
+          <input type="text" class="form-control" 
+            formControlName="empId" 
+            #empId 
+            [(ngModel)] = "p.empId"/>
+        </div>
+        <div *ngIf="angForm.controls['empId'].invalid && (angForm.controls['empId'].dirty || angForm.controls['empId'].touched)" class="alert alert-danger">
+          <div *ngIf="angForm.controls['empId'].errors.required">
+            required.
+          </div>
+        </div>
+        <div class="card-body">
+          <form [formGroup]="angForm" novalidate>
+            <div class="formgroup">
+              <label class="col-md-4">ename</label>
+              <input type="text" class="form-control" 
+                      formControlName="ename" 
+                      #ename
+                      [(ngModel)] = "p.ename"/>
+            </div>
+            <div *ngIf="angForm.controls['ename'].invalid && (angForm.controls['ename'].dirty || angForm.controls['ename'].touched)" class="alert alert-danger">
+              <div *ngIf="angForm.controls['ename'].errors.required">
+                     required.
+              </div>
+            </div>
+
+            <div class="card-body">
+              <form [formGroup]="angForm" novalidate>
+                <div class="form-group">
+                  <label class="col-md-4">email</label>
+                  <input type="text" class="form-control" 
+                    formControlName="email" 
+                    #email 
+                    [(ngModel)] = "p.email"/>
+                </div>
+                <div *ngIf="angForm.controls['email'].invalid && (angForm.controls['email'].dirty || angForm.controls['email'].touched)" class="alert alert-danger">
+                  <div *ngIf="angForm.controls['email'].errors.required">
+                  required.
+                  </div>
+                </div>
+
+                 
+                                          <div class="card-body">
+                                                <form [formGroup]="angForm" novalidate>
+                                                  <div class="form-group">
+                                                    <label class="col-md-4">phone</label>
+                                                    <input type="text" class="form-control" 
+                                                      formControlName="phone" 
+                                                      #phone 
+                                                      [(ngModel)] = "p.phone"/>
+                                                  </div>
+                                                  <div *ngIf="angForm.controls['phone'].invalid && (angForm.controls['phone'].dirty || angForm.controls['phone'].touched)" class="alert alert-danger">
+                                                    <div *ngIf="angForm.controls['phone'].errors.required">
+                                                    required.
+                                                    </div>
+                                                  </div>
+                                                
+                                                                                              
+        <div class="form-group">
+          <button (click) = "updateEmployee(empId)" type="button" class="btn btn-primary"
+          [disabled]="angForm.invalid">
+            Update Employee
+          </button>
+        </div>
+      </form>
+    </div>
+  
